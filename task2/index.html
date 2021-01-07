@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+        nav {
+            width: 400px;
+            display: flex;
+            justify-content: space-around;
+            background: orange;
+        }
+        main {
+            padding-top:20px;
+            width: 400px;
+            text-align: center;
+            background: yellow;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <h2>Task 1</h2>
+    <button v-on:click="visible=!visible">Click me</button>
+    <p v-if="visible">{{text}}</p>
+
+    <h2>Task 2</h2>
+    <nav>
+        <div @click="news">{{nav.nav_news}}</div>
+        <div @click="about">{{nav.nav_about}}</div>
+        <div @click="contacts">{{nav.nav_contacts}}</div>
+    </nav>
+    <main>
+        <div v-if="newspage">{{show.show_news}}</div>
+        <div v-if="aboutpage">{{show.show_about}}</div>
+        <div v-if="contactspage">{{show.show_contacts}}</div>
+    </main>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
