@@ -9,10 +9,12 @@
 </head>
 <body id="main">
     <br><br><br><br><br>
+    <h2>Task 1</h2>
     <p v-if="display" @click="swap">{{defaultText}}</p>
     <input v-if="!display" type="text" v-model="defaultText"><button v-if="!display" @click="swap">Сохранить</button>
 
     <br>
+    <h2>Task 2</h2>
     <input type="text" v-model="titleSearch" placeholder="Поиск по заголовкам">
     <template v-for="post in posts" :key="post.id">
         <div v-if="post.title.includes(titleSearch)">
